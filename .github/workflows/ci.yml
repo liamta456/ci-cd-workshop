@@ -1,0 +1,14 @@
+name: CI Pipeline
+
+on:
+  push: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - run: npm install
+    - run: npm test
+    - run: npm build
